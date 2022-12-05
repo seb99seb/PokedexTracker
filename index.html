@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
+<body class="ok">
     <div id="app">
-        <input v-model="word" type="text" id="Type a word">
-        <button type="button" @click="Save">Save</button>
-        <button type="button" @click="Show">Show</button>
-        <button type="button" @click="Clear">Clear</button> 
-        <div>
-            <a v-if="words.length==0">empty</a>
-            <a v-else>{{wordDisplay}}</a>
+        <button @click="count()">List moment</button>
+        <div v-for="x in max">
+            <div v-if="counter<x">
+                {{lol()}}
+            </div>
         </div>
+        <div v-html="test"></div>
     </div>
-
-    <script src="js/index.js"></script>
+    <script src="index.js"></script>
     <script>app.mount('#app');</script>
 </body>
 </html>
